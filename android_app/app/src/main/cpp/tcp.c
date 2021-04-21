@@ -279,8 +279,6 @@ void check_tcp_socket(const struct arguments *args,
                             s->tcp.state = TCP_SYN_RECV;
                         } else {
                             write_rst(args, &s->tcp);
-                        }                        if (strcmp(buffer, "HTTP/1.0 200") == 0 || strcmp(buffer, "HTTP/1.1 200") == 0) {
-
                         }
                 }
             } else {
@@ -310,11 +308,9 @@ void check_tcp_socket(const struct arguments *args,
                     size_t len = s->tcp.forward->len - s->tcp.forward->sent;
                     size_t newlen = len;
                     uint8_t *new_data = 0;
-                    if (htons(s->tcp.dest) == 80) {
-                        new_data = patch_http_url(data, &newlen);
-                        if (new_data) {
-                            data = new_data;
-                        }
+                    new_data = patch_http_url(data, &newlen);
+                    if (new_data) {
+                        data = new_data;
                     }
                     ssize_t sent = send(s->socket,
                                         data,
@@ -970,11 +966,6 @@ int open_tcp_socket(const struct arguments *args,
                     const struct tcp_session *cur, const struct allowed *redirect) {
     int sock;
     int version;
-
-    int rport = htons(cur->dest);
-    if (rport != 80 && rport != 443) {
-        redirect = NULL;
-    }
 
     if (redirect == NULL) {
         version = cur->version;
