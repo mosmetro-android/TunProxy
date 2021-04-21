@@ -7,8 +7,8 @@
     <string name="start">Start</string>
     <string name="stop">Stop</string>
     <string name="msg_start_failed">Start failed</string>
-    <string name="host_hint">Proxy address (ipv4:port)</string>
-    <string name="enter_host">Enter valid ip v4 address</string>
+    <string name="host_hint">Proxy address (IPv4:port)</string>
+    <string name="enter_host">Enter valid ip IPv4 address</string>
 
     <!-- Main menu -->
     <string name="title_show_about">About</string>
@@ -17,19 +17,20 @@
     <!-- Category -->
     <string name="search">Search</string>
 
-    <string name="pref_header_allowed_application_list">Allowed application list</string>
-    <string name="pref_header_disallowed_application_list">Disallowed application list</string>
-    <string name="pref_dialog_clear_all_application_msg">Clear all selections of Allowed / Disallowed application list</string>
+    <string name="pref_header_allowed_application_list">Whitelist</string>
+    <string name="pref_header_disallowed_application_list">Blacklist</string>
+    <string name="pref_vpn_clear_all_selection">Clear all lists</string>
+    <string name="pref_dialog_clear_all_application_msg">Reset all lists?</string>
 
-    <string name="pref_vpn_connection_mode">Allowed / Disallowed Application</string>
-    <string name="loading">Prease wait</string>
+    <string name="pref_vpn_connection_mode">Proxied applications</string>
+    <string name="loading">Loading...</string>
     <string-array name="pref_vpn_connection_name">
-        <item>Disallowed Application</item>
-        <item>Allowed Application</item>
+        <item>Whitelisted only</item>
+        <item>All except blacklisted</item>
     </string-array>
-    <string-array name="pref_vpn_connection_value">
-        <item>DISALLOW</item>
+    <string-array name="pref_vpn_connection_value" translatable="false">
         <item>ALLOW</item>
+        <item>DISALLOW</item>
     </string-array>
 
 </resources>

@@ -23,14 +23,14 @@ public class MyApplication extends Application {
         instance = this;
     }
 
-    public enum VPNMode {DISALLOW, ALLOW};
+    public enum VPNMode {ALLOW, DISALLOW};
     public enum AppSortBy {APPNAME, PKGNAME};
     public enum AppOrderBy {ASC, DESC};
     public enum AppFiltertBy {APPNAME, PKGNAME};
 
     public VPNMode loadVPNMode() {
         final SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
-        final String vpn_mode = sharedPreferences.getString(PREF_VPN_MODE, MyApplication.VPNMode.DISALLOW.name());
+        final String vpn_mode = sharedPreferences.getString(PREF_VPN_MODE, MyApplication.VPNMode.ALLOW.name());
         return VPNMode.valueOf(vpn_mode);
     }
 

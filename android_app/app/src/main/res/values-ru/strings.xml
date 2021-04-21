@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TunProxy</string>
+
+    <!-- Main Activity -->
+    <string name="notify_title">Прокси запущен</string>
+    <string name="notify_msg">Прокси запущен</string>
+    <string name="start">Запустить</string>
+    <string name="stop">Остановить</string>
+    <string name="msg_start_failed">Не удалось запустить прокси</string>
+    <string name="host_hint">Адрес HTTP-прокси (IPv4:порт)</string>
+    <string name="enter_host">Введите корректный адрес IPv4</string>
+
+    <!-- Main menu -->
+    <string name="title_show_about">О приложении</string>
+    <string name="title_activity_settings">Настройки</string>
+
+    <!-- Category -->
+    <string name="search">Поиск</string>
+
+    <string name="pref_header_allowed_application_list">Белый список</string>
+    <string name="pref_header_disallowed_application_list">Чёрный список</string>
+    <string name="pref_vpn_clear_all_selection">Очистить списки</string>
+    <string name="pref_dialog_clear_all_application_msg">Сбросить списки?</string>
+
+    <string name="pref_vpn_connection_mode">Проксируемые приложения</string>
+    <string name="loading">Загрузка...</string>
+    <string-array name="pref_vpn_connection_name">
+        <item>Только приложения из белого списка</item>
+        <item>Все, кроме указанных в чёрном списке</item>
+    </string-array>
+
+</resources>
